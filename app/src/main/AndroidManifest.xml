@@ -17,7 +17,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:theme="@style/CustomActionBarTheme">
         <activity
@@ -30,17 +30,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HttpTest.AdministratorMainPageActivity"></activity>
+        <activity android:name=".HttpTest.AdministratorMainPageActivity" />
         <activity
             android:name=".HttpTest.WeatherActivity"
-            android:theme="@style/secondPageTheme"></activity>
-
-        <activity android:name=".Book.BookActivity"></activity>
-        <activity android:name=".Book.BookListActivity"></activity>
-
-        <activity android:name=".HttpTest.GasActivity"
-            android:theme="@style/CustomActionBarTheme"  >
-        </activity>
+            android:theme="@style/secondPageTheme" />
+        <activity android:name=".Book.BookActivity" />
+        <activity android:name=".Book.BookListActivity" />
+        <activity
+            android:name=".HttpTest.GasActivity"
+            android:theme="@style/CustomActionBarTheme"></activity>
+        <activity android:name=".HttpTest.SensorActivity"></activity>
     </application>
 
 </manifest>

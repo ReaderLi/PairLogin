@@ -91,7 +91,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
                     Log.i(TAG,"onclick!");
                     //为了便于测试，设置为不验证就直接跳转
-                    Intent intent = new Intent(LoginActivity.this,GasActivity.class);
+                    Intent intent = new Intent(LoginActivity.this,WeatherActivity.class);
                     startActivity(intent);
 
 

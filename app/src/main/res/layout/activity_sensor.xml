@@ -29,7 +29,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="245dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/copicture"
+        android:background="@drawable/sensor_icon"
         />
 
     <TextView
@@ -44,7 +44,7 @@
 
     <TextView
         android:id="@+id/weatherCO_blank1"
-        android:layout_width="20dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -88,34 +88,6 @@
         android:layout_alignTop="@+id/weatherCO_blank2"
         android:layout_toEndOf="@+id/weatherCO_blank3" />
 
-    <TextView
-        android:id="@+id/weatherCO_blank4"
-        android:layout_width="20dp"
-        android:layout_height="40dp"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:layout_alignTop="@+id/weatherCO_title"
-        android:layout_toEndOf="@+id/weatherCO_describe_title" />
-
-    <TextView
-        android:id="@+id/weatherCO_data"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:text="25.1"
-        android:layout_alignTop="@+id/weatherCO_title"
-        android:layout_toEndOf="@+id/weatherCO_blank4" />
-    <TextView
-        android:id="@+id/weatherCO_data_unite"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:text="@string/unit"
-        android:layout_alignBaseline="@+id/weatherCO_data"
-        android:layout_alignBottom="@+id/weatherCO_data"
-        android:layout_toEndOf="@+id/weatherCO_data" />
 
     <TextView
         android:id="@+id/weatherCO_devideLine"
@@ -135,7 +107,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="305dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/co2picture"
+        android:background="@drawable/sensor_icon"
         />
     <TextView
         android:id="@+id/weatherCO2_title"
@@ -149,7 +121,7 @@
 
     <TextView
         android:id="@+id/weatherCO2_blank1"
-        android:layout_width="20dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -192,34 +164,7 @@
         android:textSize="20sp"
         android:layout_alignTop="@+id/weatherCO2_title"
         android:layout_toEndOf="@+id/weatherCO2_blank3" />
-    <TextView
-        android:id="@+id/weatherCO2_blank4"
-        android:layout_width="20dp"
-        android:layout_height="40dp"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:layout_alignTop="@+id/weatherCO2_title"
-        android:layout_toEndOf="@+id/weatherCO2_describe_title" />
 
-    <TextView
-        android:id="@+id/weatherCO2_data"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:text="45.1"
-        android:layout_alignTop="@+id/weatherCO2_title"
-        android:layout_toEndOf="@+id/weatherCO2_blank4" />
-    <TextView
-        android:id="@+id/weatherCO2_data_unite"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:text="@string/unit"
-        android:layout_alignBaseline="@+id/weatherCO2_data"
-        android:layout_alignBottom="@+id/weatherCO2_data"
-        android:layout_toEndOf="@+id/weatherCO2_data" />
 
     <TextView
         android:id="@+id/weatherCO2_devideLine"
@@ -238,7 +183,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="355dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/c2h2opicture"
+        android:background="@drawable/sensor_icon"
         />
     <TextView
         android:id="@+id/weatherC2H2O_title"
@@ -252,7 +197,7 @@
 
     <TextView
         android:id="@+id/weatherC2H2O_blank1"
-        android:layout_width="20dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -296,34 +241,6 @@
         android:layout_alignTop="@+id/weatherC2H2O_blank1"
         android:layout_toEndOf="@+id/weatherC2H2O_blank3" />
 
-    <TextView
-        android:id="@+id/weatherC2H2O_blank4"
-        android:layout_width="20dp"
-        android:layout_height="40dp"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:layout_alignTop="@+id/weatherC2H2O_blank1"
-        android:layout_toEndOf="@+id/weatherC2H2O_describe_title" />
-
-    <TextView
-        android:id="@+id/weatherC2H2O_data"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:text="65.1"
-        android:layout_alignTop="@+id/weatherC2H2O_blank1"
-        android:layout_toEndOf="@+id/weatherC2H2O_blank4" />
-    <TextView
-        android:id="@+id/weatherC2H2O_data_unite"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:text="@string/unit"
-        android:layout_alignBaseline="@+id/weatherC2H2O_data"
-        android:layout_alignBottom="@+id/weatherC2H2O_data"
-        android:layout_toEndOf="@+id/weatherC2H2O_data" />
 
     <TextView
         android:id="@+id/weatherC2H2O_devideLine"
@@ -338,7 +255,7 @@
     <!-- three buttons on the bottom-->
     <Button
         android:id="@+id/button_gasPage"
-        android:background="@drawable/button_gas_blue"
+        android:background="@drawable/button_gas_black"
         android:layout_above="@+id/button_page_blank3"
         android:layout_width="50dp"
         android:layout_height="50dp" />
@@ -352,7 +269,7 @@
 
     <Button
         android:id="@+id/button_sensorPage"
-        android:background="@drawable/button_sensor_black"
+        android:background="@drawable/button_sensor_blue"
         android:layout_toRightOf="@+id/button_page_blank1"
         android:layout_above="@+id/button_page_blank3"
         android:layout_width="50dp"

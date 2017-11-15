@@ -33,10 +33,13 @@
     <string name="weatherCO_name">一氧化碳</string>
     <string name="weatherCO2_name">二氧化碳</string>
     <string name="weatherC2H2O_name">甲醛</string>
+
     <string name="weather_describe1">低</string>
     <string name="weather_describe2">中</string>
     <string name="weather_describe3">高</string>
 
     <string name="unit">mg/ml</string>
+
+    <string name="sensor_connect_state"></string>
 
 </resources>

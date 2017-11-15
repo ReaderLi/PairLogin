@@ -29,14 +29,9 @@ public class WeatherActivity extends Activity {
 
         Log.i(TAG,"onCreate");
         actionBar=getActionBar();
-        actionBar.show();
 
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        //return true;
-        return super.onCreateOptionsMenu(menu);
+        actionBar.setCustomView(R.layout.actionbar_title);
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+
     }
 }
