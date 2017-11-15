@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".HttpTest.LoginActivity"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/book_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <RelativeLayout style="@style/ButtonBar" >
+
+            <ImageButton
+                android:id="@+id/entry_book_button"
+                style="@style/ButtonBarImgBtn"
+                android:background="@drawable/entry_book_background"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+        <RelativeLayout style="@style/ButtonBar">
+
+            <ImageButton
+                android:id="@+id/borrow_book_button"
+                style="@style/ButtonBarImgBtn"
+                android:background="@drawable/borrow_book_background"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/ButtonBar" >
+
+            <ImageButton
+                android:id="@+id/return_book_button"
+                style="@style/ButtonBarImgBtn"
+                android:background="@drawable/return_book_background"
+                android:contentDescription="@string/app_name" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/ButtonBar" >
+
+            <ImageButton
+                android:id="@+id/user_center_button"
+                style="@style/ButtonBarImgBtn"
+                android:background="@drawable/user_center_background"
+                android:contentDescription="@string/app_name"
+               />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/main_bottom"
+        android:background="@color/devide_line" />
+
+</RelativeLayout>

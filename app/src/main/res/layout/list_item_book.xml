@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/list_item_book_isbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:padding="4dp"
+        tools:text="Book ISBN"/>
+
+    <!--        android:layout_toLeftOf="@id/list_item_crime_solved_check_box"-->
+    <TextView
+        android:id="@+id/list_item_book_isbn_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_item_book_isbn"
+        android:padding="4dp"
+        tools:text="ISBN Date"/>
+
+    <TextView
+        android:id="@+id/list_item_book_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_item_book_isbn"
+        android:textStyle="bold"
+        android:padding="4dp"
+        tools:text="Book TYPE"/>
+
+    <!--        android:layout_toLeftOf="@id/list_item_crime_solved_check_box"-->
+    <TextView
+        android:id="@+id/list_item_book_type_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_item_book_type"
+        android:layout_toRightOf="@id/list_item_book_isbn_textView"
+        android:padding="4dp"
+        tools:text="type Date"/>
+
+    <TextView
+        android:id="@+id/list_item_book_pledgeCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_item_book_type_textView"
+        android:textStyle="bold"
+        android:padding="4dp"
+        tools:text="Book pledgeCash"/>
+
+    <!--        android:layout_toLeftOf="@id/list_item_crime_solved_check_box"-->
+    <TextView
+        android:id="@+id/list_item_book_pledgeCash_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_item_book_pledgeCash"
+        android:padding="4dp"
+        tools:text="pledgeCash Date"/>
+
+    <TextView
+        android:id="@+id/list_item_book_callNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_item_book_pledgeCash"
+        android:layout_below="@id/list_item_book_type_textView"
+        android:textStyle="bold"
+        android:padding="4dp"
+        tools:text="Book callNumber"/>
+
+    <!--        android:layout_toLeftOf="@id/list_item_crime_solved_check_box"-->
+    <TextView
+        android:id="@+id/list_item_book_callNumber_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_item_book_pledgeCash_textView"
+        android:layout_below="@id/list_item_book_callNumber"
+        android:padding="4dp"
+        tools:text="callNumber Date"/>
+
+</RelativeLayout>

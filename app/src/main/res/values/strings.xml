@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PairLogin</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="tvLogo_text">Indoor Air</string>
+    <string name="tvTop_text">管理员登录</string>
+    <string name="etEmail_hint">用户名</string>
+    <string name="etPassword_hint">密码</string>
+    <string name="scan_button">扫一扫</string>
+
+    <string name="scan_item">扫描书籍</string>
+
+    <string name="book_isbn_label">书籍ISBN</string>
+    <string name="book_isbn_hint">此处为书籍ISBN信息</string>
+
+    <string name="book_type_label">书籍种类</string>
+    <string name="book_type_hint">此处为书籍种类信息</string>
+
+
+    <string name="book_pledgeCash_label">书籍押金</string>
+    <string name="book_pledgeCash_hint">此处为书籍押金信息</string>
+
+
+    <string name="book_callNumber_label">书籍索书号</string>
+    <string name="book_callNumber_hint">此处为书籍索书号信息</string>
+
+    <string name="action_sign_in_short">登录</string>
+
+    <string name="search">搜索</string>
+    <string name="weatherCO_name">一氧化碳</string>
+    <string name="weatherCO2_name">二氧化碳</string>
+    <string name="weatherC2H2O_name">甲醛</string>
+    <string name="weather_describe1">低</string>
+    <string name="weather_describe2">中</string>
+    <string name="weather_describe3">高</string>
+
+    <string name="unit">mg/ml</string>
+
+</resources>

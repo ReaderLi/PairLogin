@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- 应用于程序或者活动的主题 -->
+    <style name="CustomActionBarTheme"
+        parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarSize">50dip</item>
+    </style>
+
+    <!-- ActionBar 样式 -->
+    <style name="MyActionBar"
+        parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/background_login</item>
+        <!-- 在样式里面去掉acionbar的应用图标和标题 -->
+        <item name="android:displayOptions">useLogo</item>
+    </style>
+
+
+    <style name="secondPageTheme"
+        parent="@android:style/Theme.Holo.Light.DarkActionBar"
+        >
+        <item name="android:actionBarStyle">@style/MyActionBar2</item>
+        <item name="android:actionBarSize">50dip</item>
+
+    </style>
+    <!-- ActionBar 样式 -->
+    <style name="MyActionBar2"
+        parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/background_login</item>
+        <item name="android:displayOptions">none</item>
+    </style>
+
+
+    <style name="ButtonBar">
+        <item name="android:layout_height">65dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="ButtonBarImgBtn">
+    <item name="android:layout_height">65dp</item>
+    <item name="android:layout_width">65dp</item>
+    <item name="android:scaleType">fitXY</item>
+    <item name="android:layout_centerInParent">true</item>
+    </style>
+</resources>
