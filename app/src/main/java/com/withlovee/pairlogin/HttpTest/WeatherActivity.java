@@ -3,13 +3,16 @@ package com.withlovee.pairlogin.HttpTest;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 
 import com.withlovee.pairlogin.R;
 
@@ -19,6 +22,8 @@ import com.withlovee.pairlogin.R;
 public class WeatherActivity extends Activity {
 
     private ActionBar actionBar;
+
+    private Button button1;
 
     private String TAG="WeatherActivity";
     @Override
@@ -32,6 +37,24 @@ public class WeatherActivity extends Activity {
 
         actionBar.setCustomView(R.layout.actionbar_title);
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+
+        button1 = (Button) findViewById(R.id.button_sensorPage);
+        if(button1 != null){
+
+            button1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Log.i(TAG,"button_sensorPage onClick");
+
+                    Intent intent = new Intent(WeatherActivity.this,SensorActivity.class);
+                    startActivity(intent);
+                }
+
+
+            });
+        }
+
 
     }
 }

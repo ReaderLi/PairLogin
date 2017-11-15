@@ -40,6 +40,7 @@
 
     <string name="unit">mg/ml</string>
 
-    <string name="sensor_connect_state"></string>
+    <string name="sensor_connect_stateT">连接正常</string>
+    <string name="sensor_connect_stateF">连接断开</string>
 
 </resources>

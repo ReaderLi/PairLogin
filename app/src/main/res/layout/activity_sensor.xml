@@ -24,7 +24,7 @@
     <!--   **************************       -->
     <!-- weather condition: CO-->
     <TextView
-        android:id="@+id/weatherCO_titleIcon"
+        android:id="@+id/sensorCO_titleIcon"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="245dp"
@@ -33,7 +33,7 @@
         />
 
     <TextView
-        android:id="@+id/weatherCO_title"
+        android:id="@+id/sensorCO_title"
         android:layout_width="85dp"
         android:layout_height="30dp"
         android:layout_marginLeft="45dp"
@@ -43,54 +43,54 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/weatherCO_blank1"
-        android:layout_width="100dp"
+        android:id="@+id/sensorCO_blank1"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_alignTop="@+id/weatherCO_title"
-        android:layout_toEndOf="@+id/weatherCO_title" />
+        android:layout_alignTop="@+id/sensorCO_title"
+        android:layout_toEndOf="@+id/sensorCO_title" />
 
     <TextView
-        android:id="@+id/weatherCO_describe_icon"
+        android:id="@+id/sensorCO_describe_icon"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:textColor="@color/black"
-        android:background="@drawable/small_data"
-        android:layout_alignTop="@+id/weatherCO_blank1"
-        android:layout_toEndOf="@+id/weatherCO_blank1" />
+        android:background="@drawable/sensor_connect_state_icon"
+        android:layout_alignTop="@+id/sensorCO_blank1"
+        android:layout_toEndOf="@+id/sensorCO_blank1" />
     <TextView
-        android:id="@+id/weatherCO_blank2"
+        android:id="@+id/sensorCO_blank2"
         android:layout_width="3dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/weatherCO_title"
-        android:layout_toEndOf="@+id/weatherCO_describe_icon" />
+        android:layout_alignTop="@+id/sensorCO_title"
+        android:layout_toEndOf="@+id/sensorCO_describe_icon" />
     <TextView
-        android:id="@+id/weatherCO_blackLine1"
+        android:id="@+id/sensorCO_blackLine1"
         android:layout_width="2dp"
         android:layout_height="30dp"
         android:background="@color/gray"
-        android:layout_alignTop="@+id/weatherCO_title"
-        android:layout_toEndOf="@+id/weatherCO_blank2" />
+        android:layout_alignTop="@+id/sensorCO_title"
+        android:layout_toEndOf="@+id/sensorCO_blank2" />
     <TextView
-        android:id="@+id/weatherCO_blank3"
+        android:id="@+id/sensorCO_blank3"
         android:layout_width="3dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/weatherCO_title"
-        android:layout_toEndOf="@+id/weatherCO_blackLine1" />
+        android:layout_alignTop="@+id/sensorCO_title"
+        android:layout_toEndOf="@+id/sensorCO_blackLine1" />
+
     <TextView
-        android:id="@+id/weatherCO_describe_title"
-        android:layout_width="30dp"
+        android:id="@+id/sensorCO_describe_title"
+        android:layout_width="100dp"
         android:layout_height="30dp"
-        android:text="@string/weather_describe1"
+        android:text="@string/sensor_connect_stateT"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_alignTop="@+id/weatherCO_blank2"
-        android:layout_toEndOf="@+id/weatherCO_blank3" />
-
+        android:layout_alignTop="@+id/sensorCO_blank3"
+        android:layout_toEndOf="@+id/sensorCO_blank3" />
 
     <TextView
-        android:id="@+id/weatherCO_devideLine"
+        android:id="@+id/sensorCO_devideLine"
         android:layout_width="350dp"
         android:layout_height="1dp"
         android:layout_marginTop="295dp"
@@ -102,7 +102,7 @@
     <!-- -->
     <!-- weather condition: CO2-->
     <TextView
-        android:id="@+id/weatherCO2_titleIcon"
+        android:id="@+id/sensorCO2_titleIcon"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="305dp"
@@ -110,7 +110,7 @@
         android:background="@drawable/sensor_icon"
         />
     <TextView
-        android:id="@+id/weatherCO2_title"
+        android:id="@+id/sensorCO2_title"
         android:layout_width="85dp"
         android:layout_height="30dp"
         android:layout_marginLeft="45dp"
@@ -120,54 +120,54 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/weatherCO2_blank1"
-        android:layout_width="100dp"
+        android:id="@+id/sensorCO2_blank1"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_alignTop="@+id/weatherCO2_title"
-        android:layout_toEndOf="@+id/weatherCO2_title" />
+        android:layout_alignTop="@+id/sensorCO2_title"
+        android:layout_toEndOf="@+id/sensorCO2_title" />
 
     <TextView
-        android:id="@+id/weatherCO2_describe_icon"
+        android:id="@+id/sensorCO2_describe_icon"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:textColor="@color/black"
-        android:background="@drawable/middle_data"
-        android:layout_alignTop="@+id/weatherCO2_blank1"
-        android:layout_toEndOf="@+id/weatherCO2_blank1" />
+        android:background="@drawable/sensor_break_state_icon"
+        android:layout_alignTop="@+id/sensorCO2_blank1"
+        android:layout_toEndOf="@+id/sensorCO2_blank1" />
     <TextView
-        android:id="@+id/weatherCO2_blank2"
+        android:id="@+id/sensorCO2_blank2"
         android:layout_width="3dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/weatherCO2_blank1"
-        android:layout_toEndOf="@+id/weatherCO2_describe_icon" />
+        android:layout_alignTop="@+id/sensorCO2_blank1"
+        android:layout_toEndOf="@+id/sensorCO2_describe_icon" />
     <TextView
-        android:id="@+id/weatherCO2_blackLine1"
+        android:id="@+id/sensorCO2_blackLine1"
         android:layout_width="2dp"
         android:layout_height="30dp"
         android:background="@color/gray"
-        android:layout_alignTop="@+id/weatherCO2_blank1"
-        android:layout_toEndOf="@+id/weatherCO2_blank2" />
+        android:layout_alignTop="@+id/sensorCO2_blank1"
+        android:layout_toEndOf="@+id/sensorCO2_blank2" />
     <TextView
-        android:id="@+id/weatherCO2_blank3"
+        android:id="@+id/sensorCO2_blank3"
         android:layout_width="3dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/weatherCO2_title"
-        android:layout_toEndOf="@+id/weatherCO2_blackLine1" />
+        android:layout_alignTop="@+id/sensorCO2_title"
+        android:layout_toEndOf="@+id/sensorCO2_blackLine1" />
     <TextView
-        android:id="@+id/weatherCO2_describe_title"
-        android:layout_width="30dp"
+        android:id="@+id/sensorCO2_describe_title"
+        android:layout_width="100dp"
         android:layout_height="30dp"
-        android:text="@string/weather_describe2"
+        android:text="@string/sensor_connect_stateF"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_alignTop="@+id/weatherCO2_title"
-        android:layout_toEndOf="@+id/weatherCO2_blank3" />
+        android:layout_alignTop="@+id/sensorCO2_title"
+        android:layout_toEndOf="@+id/sensorCO2_blank3" />
 
 
     <TextView
-        android:id="@+id/weatherCO2_devideLine"
+        android:id="@+id/sensorCO2_devideLine"
         android:layout_width="350dp"
         android:layout_height="1dp"
         android:layout_marginTop="345dp"
@@ -178,7 +178,7 @@
 
     <!-- weather condition: C2H2O-->
     <TextView
-        android:id="@+id/weatherC2H2O_titleIcon"
+        android:id="@+id/sensorC2H2O_titleIcon"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="355dp"
@@ -186,7 +186,7 @@
         android:background="@drawable/sensor_icon"
         />
     <TextView
-        android:id="@+id/weatherC2H2O_title"
+        android:id="@+id/sensorC2H2O_title"
         android:layout_width="85dp"
         android:layout_height="30dp"
         android:layout_marginLeft="45dp"
@@ -196,54 +196,54 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/weatherC2H2O_blank1"
-        android:layout_width="100dp"
+        android:id="@+id/sensorC2H2O_blank1"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_alignTop="@+id/weatherC2H2O_title"
-        android:layout_toEndOf="@+id/weatherC2H2O_title" />
+        android:layout_alignTop="@+id/sensorC2H2O_title"
+        android:layout_toEndOf="@+id/sensorC2H2O_title" />
 
     <TextView
-        android:id="@+id/weatherC2H2O_describe_icon"
+        android:id="@+id/sensorC2H2O_describe_icon"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:textColor="@color/black"
-        android:background="@drawable/height_data"
-        android:layout_alignTop="@+id/weatherC2H2O_blank1"
-        android:layout_toEndOf="@+id/weatherC2H2O_blank1" />
+        android:background="@drawable/sensor_break_state_icon"
+        android:layout_alignTop="@+id/sensorC2H2O_blank1"
+        android:layout_toEndOf="@+id/sensorC2H2O_blank1" />
     <TextView
-        android:id="@+id/weatherC2H2O_blank2"
+        android:id="@+id/sensorC2H2O_blank2"
         android:layout_width="3dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/weatherC2H2O_blank1"
-        android:layout_toEndOf="@+id/weatherC2H2O_describe_icon" />
+        android:layout_alignTop="@+id/sensorC2H2O_blank1"
+        android:layout_toEndOf="@+id/sensorC2H2O_describe_icon" />
     <TextView
-        android:id="@+id/weatherC2H2O_blackLine1"
+        android:id="@+id/sensorC2H2O_blackLine1"
         android:layout_width="2dp"
         android:layout_height="30dp"
         android:background="@color/gray"
-        android:layout_alignTop="@+id/weatherC2H2O_blank1"
-        android:layout_toEndOf="@+id/weatherC2H2O_blank2" />
+        android:layout_alignTop="@+id/sensorC2H2O_blank1"
+        android:layout_toEndOf="@+id/sensorC2H2O_blank2" />
     <TextView
-        android:id="@+id/weatherC2H2O_blank3"
+        android:id="@+id/sensorC2H2O_blank3"
         android:layout_width="3dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/weatherC2H2O_blank1"
-        android:layout_toEndOf="@+id/weatherC2H2O_blackLine1" />
+        android:layout_alignTop="@+id/sensorC2H2O_blank1"
+        android:layout_toEndOf="@+id/sensorC2H2O_blackLine1" />
     <TextView
-        android:id="@+id/weatherC2H2O_describe_title"
-        android:layout_width="30dp"
+        android:id="@+id/sensorC2H2O_describe_title"
+        android:layout_width="100dp"
         android:layout_height="30dp"
-        android:text="@string/weather_describe3"
+        android:text="@string/sensor_connect_stateF"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_alignTop="@+id/weatherC2H2O_blank1"
-        android:layout_toEndOf="@+id/weatherC2H2O_blank3" />
+        android:layout_alignTop="@+id/sensorC2H2O_blank1"
+        android:layout_toEndOf="@+id/sensorC2H2O_blank3" />
 
 
     <TextView
-        android:id="@+id/weatherC2H2O_devideLine"
+        android:id="@+id/sensorC2H2O_devideLine"
         android:layout_width="350dp"
         android:layout_height="1dp"
         android:layout_marginTop="395dp"
@@ -254,46 +254,48 @@
 
     <!-- three buttons on the bottom-->
     <Button
-        android:id="@+id/button_gasPage"
+        android:id="@+id/button_gasPage_sensor"
         android:background="@drawable/button_gas_black"
-        android:layout_above="@+id/button_page_blank3"
+        android:layout_above="@+id/button_page_blank3_sensor"
         android:layout_width="50dp"
         android:layout_height="50dp" />
 
     <TextView
-        android:id="@+id/button_page_blank1"
+        android:id="@+id/button_page_blank1_sensor"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/button_sensorPage"
-        android:layout_toEndOf="@+id/button_gasPage"
+        android:layout_alignTop="@+id/button_gasPage_sensor"
+        android:layout_toEndOf="@+id/button_gasPage_sensor"
         android:layout_width="90dp" />
 
     <Button
-        android:id="@+id/button_sensorPage"
+        android:id="@+id/button_sensorPage_sensor"
         android:background="@drawable/button_sensor_blue"
-        android:layout_toRightOf="@+id/button_page_blank1"
-        android:layout_above="@+id/button_page_blank3"
+        android:layout_toRightOf="@+id/button_page_blank1_sensor"
+        android:layout_above="@+id/button_page_blank3_sensor"
         android:layout_width="50dp"
         android:layout_height="50dp" />
 
     <TextView
-        android:id="@+id/button_page_blank2"
+        android:id="@+id/button_page_blank2_sensor"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/button_gasPage"
-        android:layout_toEndOf="@+id/button_sensorPage"
+        android:layout_alignTop="@+id/button_gasPage_sensor"
+        android:layout_toEndOf="@+id/button_sensorPage_sensor"
         android:layout_width="90dp" />
 
     <Button
-        android:id="@+id/button_accountPage"
+        android:id="@+id/button_accountPage_sensor"
         android:background="@drawable/button_person_center_black"
-        android:layout_toRightOf="@+id/button_page_blank2"
-        android:layout_above="@+id/button_page_blank3"
+        android:layout_toRightOf="@+id/button_page_blank2_sensor"
+        android:layout_above="@+id/button_page_blank3_sensor"
         android:layout_width="50dp"
         android:layout_height="50dp" />
 
     <TextView
-        android:id="@+id/button_page_blank3"
+        android:id="@+id/button_page_blank3_sensor"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_alignParentBottom="true" />
+
+
 
 </RelativeLayout>

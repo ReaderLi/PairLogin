@@ -337,44 +337,44 @@
 
     <!-- three buttons on the bottom-->
     <Button
-        android:id="@+id/button_gasPage"
+        android:id="@+id/button_gasPage_gas"
         android:background="@drawable/button_gas_blue"
-        android:layout_above="@+id/button_page_blank3"
+        android:layout_above="@+id/button_page_blank3_gas"
         android:layout_width="50dp"
         android:layout_height="50dp" />
 
     <TextView
-        android:id="@+id/button_page_blank1"
+        android:id="@+id/button_page_blank1_gas"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/button_sensorPage"
-        android:layout_toEndOf="@+id/button_gasPage"
+        android:layout_alignTop="@+id/button_sensorPage_gas"
+        android:layout_toEndOf="@+id/button_gasPage_gas"
         android:layout_width="90dp" />
 
     <Button
-        android:id="@+id/button_sensorPage"
+        android:id="@+id/button_sensorPage_gas"
         android:background="@drawable/button_sensor_black"
-        android:layout_toRightOf="@+id/button_page_blank1"
-        android:layout_above="@+id/button_page_blank3"
+        android:layout_toRightOf="@+id/button_page_blank1_gas"
+        android:layout_above="@+id/button_page_blank3_gas"
         android:layout_width="50dp"
         android:layout_height="50dp" />
 
     <TextView
-        android:id="@+id/button_page_blank2"
+        android:id="@+id/button_page_blank2_gas"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/button_gasPage"
-        android:layout_toEndOf="@+id/button_sensorPage"
+        android:layout_alignTop="@+id/button_gasPage_gas"
+        android:layout_toEndOf="@+id/button_sensorPage_gas"
         android:layout_width="90dp" />
 
     <Button
-        android:id="@+id/button_accountPage"
+        android:id="@+id/button_accountPage_gas"
         android:background="@drawable/button_person_center_black"
-        android:layout_toRightOf="@+id/button_page_blank2"
-        android:layout_above="@+id/button_page_blank3"
+        android:layout_toRightOf="@+id/button_page_blank2_gas"
+        android:layout_above="@+id/button_page_blank3_gas"
         android:layout_width="50dp"
         android:layout_height="50dp" />
 
     <TextView
-        android:id="@+id/button_page_blank3"
+        android:id="@+id/button_page_blank3_gas"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_alignParentBottom="true" />

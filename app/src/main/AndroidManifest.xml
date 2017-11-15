@@ -39,7 +39,10 @@
         <activity
             android:name=".HttpTest.GasActivity"
             android:theme="@style/CustomActionBarTheme"></activity>
-        <activity android:name=".HttpTest.SensorActivity"></activity>
+        <activity android:name=".HttpTest.SensorActivity"
+            android:theme="@style/CustomActionBarTheme"
+            ></activity>
+
     </application>
 
 </manifest>
