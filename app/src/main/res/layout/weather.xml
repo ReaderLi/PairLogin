@@ -367,7 +367,7 @@
 
     <Button
         android:id="@+id/button_accountPage"
-        android:background="@drawable/button_person_center_black"
+        android:background="@drawable/button_user_center_black"
         android:layout_toRightOf="@+id/button_page_blank2"
         android:layout_above="@+id/button_page_blank3"
         android:layout_width="50dp"

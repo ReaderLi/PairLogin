@@ -13,8 +13,8 @@
         style="@style/LinearLayout_Style"
         >
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             android:id="@+id/fratext1"
             android:background="@drawable/button_gas_black"
             android:textColor="@color/black"
@@ -27,8 +27,8 @@
         android:layout_weight="1"
         style="@style/LinearLayout_Style">
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             android:id="@+id/fratext2"
             android:background="@drawable/button_sensor_black"
             android:textColor="@color/black"/>
@@ -40,10 +40,10 @@
         android:layout_weight="1"
         style="@style/LinearLayout_Style">
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             android:id="@+id/fratext3"
-            android:background="@drawable/button_person_center_black"
+            android:background="@drawable/button_user_center_black"
             android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>

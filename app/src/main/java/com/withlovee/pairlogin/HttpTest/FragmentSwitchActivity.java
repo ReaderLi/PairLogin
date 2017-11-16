@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,11 +26,14 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     /**定义手势两点之间的最小距离*/
     final int DISTANT=50;
 
+    private String TAG="FragmentSwitchActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_switch);
 
+        Log.i(TAG,"OnCreate");
         //分别实例化和初始化fragement、lineatlayout、textview
         setfragment();
         setlinearLayouts();
@@ -41,6 +45,8 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     /**初始化fragment*/
     public void setfragment()
     {
+        Log.i(TAG,"setFragment");
+
         fragments=new Fragment[3];
         fragments[0]=getSupportFragmentManager().findFragmentById(R.id.fragment1);
         fragments[1]=getSupportFragmentManager().findFragmentById(R.id.fragment2);
@@ -52,11 +58,12 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     /**初始化linerlayout*/
     public void setlinearLayouts()
     {
+        Log.i(TAG,"setlinearLayouts");
         linearLayouts=new LinearLayout[3];
         linearLayouts[0]=(LinearLayout)findViewById(R.id.lay1);
         linearLayouts[1]=(LinearLayout)findViewById(R.id.lay2);
         linearLayouts[2]=(LinearLayout)findViewById(R.id.lay3);
-        linearLayouts[0].setBackgroundResource(R.drawable.background);
+        linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
     }
 
     /**初始化textview*/
@@ -66,18 +73,21 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
         textViews[0]=(TextView)findViewById(R.id.fratext1);
         textViews[1]=(TextView)findViewById(R.id.fratext2);
         textViews[2]=(TextView)findViewById(R.id.fratext3);
-        textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
+        //textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
     }
     /**点击底部linerlayout实现切换fragment的效果*/
     public void LayoutOnclick(View v)
     {
+
+        Log.i(TAG,"LayoutOnclick");
         resetlaybg();//每次点击都重置linearLayouts的背景、textViews字体颜色
         switch (v.getId()) {
             case R.id.lay1:
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[0]).commit();
                 linearLayouts[0].setBackgroundResource(R.drawable.background);
-                textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
+               // textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
+                textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
                 MARK=0;
                 break;
 
@@ -85,14 +95,16 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[1]).commit();
                 linearLayouts[1].setBackgroundResource(R.drawable.background);
-                textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
+                //textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
+                textViews[1].setBackground(getDrawable(R.drawable.button_sensor_blue));
                 MARK=1;
                 break;
             case R.id.lay3:
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[2]).commit();
                 linearLayouts[2].setBackgroundResource(R.drawable.background);
-                textViews[2].setTextColor(getResources().getColor(R.color.lightseagreen));
+                //textViews[2].setTextColor(getResources().getColor(R.color.lightseagreen));
+                textViews[2].setBackground(getDrawable(R.drawable.button_user_center_blue));
                 MARK=2;
                 break;
             default:
@@ -102,9 +114,10 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     /**重置linearLayouts、textViews*/
     public void resetlaybg()
     {
+        Log.i(TAG,"resetlaybg");
         for(int i=0;i<3;i++)
         {
-            linearLayouts[i].setBackgroundResource(R.drawable.background_login);
+            linearLayouts[i].setBackgroundResource(R.color.lightseagreen);
             textViews[i].setTextColor(getResources().getColor(R.color.black));
         }
 
@@ -126,6 +139,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     public boolean onFling(MotionEvent arg0, MotionEvent arg1, float arg2,
                            float arg3) {
         // TODO Auto-generated method stub
+        Log.i(TAG,"resetlaybg");
         resetlaybg();
         //当是Fragment0的时候
         if(MARK==0)
@@ -134,13 +148,13 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[1]).commit();
-                linearLayouts[1].setBackgroundResource(R.drawable.background);
+                linearLayouts[1].setBackgroundResource(R.color.lightseagreen);
                 textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
                 MARK=1;
             }
             else
             {
-                linearLayouts[0].setBackgroundResource(R.drawable.background);
+                linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
                 textViews[0].setTextColor(getResources().getColor(R.color.black));
             }
 
@@ -152,7 +166,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[2]).commit();
-                linearLayouts[2].setBackgroundResource(R.drawable.background);
+                linearLayouts[2].setBackgroundResource(R.color.lightseagreen);
                 textViews[2].setTextColor(getResources().getColor(R.color.lightseagreen));
                 MARK=2;
             }
@@ -160,13 +174,13 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[0]).commit();
-                linearLayouts[0].setBackgroundResource(R.drawable.background);
+                linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
                 textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
                 MARK=0;
             }
             else
             {
-                linearLayouts[1].setBackgroundResource(R.drawable.background);
+                linearLayouts[1].setBackgroundResource(R.color.lightseagreen);
                 textViews[1].setTextColor(getResources().getColor(R.color.black));
             }
         }
@@ -177,13 +191,13 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[1]).commit();
-                linearLayouts[1].setBackgroundResource(R.drawable.background);
+                linearLayouts[1].setBackgroundResource(R.color.lightseagreen);
                 textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
                 MARK=1;
             }
             else
             {
-                linearLayouts[2].setBackgroundResource(R.drawable.background);
+                linearLayouts[2].setBackgroundResource(R.color.lightseagreen);
                 textViews[2].setTextColor(getResources().getColor(R.color.black));
             }
         }
