@@ -49,4 +49,11 @@
     <item name="android:scaleType">fitXY</item>
     <item name="android:layout_centerInParent">true</item>
     </style>
+
+    <style name="LinearLayout_Style">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">LayoutOnclick</item>
+    </style>
 </resources>

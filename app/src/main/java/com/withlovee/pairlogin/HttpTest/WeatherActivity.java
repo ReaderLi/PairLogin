@@ -8,10 +8,7 @@ import android.os.Bundle;
 
 
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 
 import com.withlovee.pairlogin.R;
@@ -35,7 +32,7 @@ public class WeatherActivity extends Activity {
         Log.i(TAG,"onCreate");
         actionBar=getActionBar();
 
-        actionBar.setCustomView(R.layout.actionbar_title);
+        actionBar.setCustomView(R.layout.actionbar_title_weatherpage);
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 
         button1 = (Button) findViewById(R.id.button_sensorPage);
