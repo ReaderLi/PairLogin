@@ -26,6 +26,11 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     /**定义手势两点之间的最小距离*/
     final int DISTANT=50;
 
+    //tag等于false，即代表底部按钮的背景图片是黑色
+    boolean tagFragment0 = false;
+    boolean tagFragment1 = false;
+    boolean tagFragment2 = false;
+
     private String TAG="FragmentSwitchActivity";
 
     @Override
@@ -63,7 +68,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
         linearLayouts[0]=(LinearLayout)findViewById(R.id.lay1);
         linearLayouts[1]=(LinearLayout)findViewById(R.id.lay2);
         linearLayouts[2]=(LinearLayout)findViewById(R.id.lay3);
-        linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
+        //linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
     }
 
     /**初始化textview*/
@@ -74,37 +79,88 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
         textViews[1]=(TextView)findViewById(R.id.fratext2);
         textViews[2]=(TextView)findViewById(R.id.fratext3);
         //textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
+        textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
+        tagFragment0 = !tagFragment0;
     }
     /**点击底部linerlayout实现切换fragment的效果*/
     public void LayoutOnclick(View v)
     {
 
         Log.i(TAG,"LayoutOnclick");
-        resetlaybg();//每次点击都重置linearLayouts的背景、textViews字体颜色
+        //resetlaybg();//每次点击都重置linearLayouts的背景、textViews字体颜色
         switch (v.getId()) {
             case R.id.lay1:
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[0]).commit();
-                linearLayouts[0].setBackgroundResource(R.drawable.background);
+                //linearLayouts[0].setBackgroundResource(R.drawable.background);
                // textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
-                textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
+                //textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
+                //设置底部按钮的颜色变换，因为当前是fragment0，所以gas button图片背景如果是黑色，则置换为蓝色
+                if(tagFragment0 == false){
+                    textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
+                    tagFragment0 = !tagFragment0;
+                }
+
+                //若其余两个按钮为蓝色，则置为黑色
+                if(tagFragment2 == true){
+                    textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
+                    tagFragment2 = !tagFragment2;
+                }
+                if(tagFragment1 == true){
+                    textViews[1].setBackground(getDrawable(R.drawable.button_sensor_black));
+                    tagFragment1 = !tagFragment1;
+                }
+
                 MARK=0;
                 break;
 
             case R.id.lay2:
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[1]).commit();
-                linearLayouts[1].setBackgroundResource(R.drawable.background);
+                //linearLayouts[1].setBackgroundResource(R.drawable.background);
                 //textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
-                textViews[1].setBackground(getDrawable(R.drawable.button_sensor_blue));
+               // textViews[1].setBackground(getDrawable(R.drawable.button_sensor_blue));
+
+                //设置底部按钮的颜色变换，因为当前是fragment1，所以sensor button图片背景如果是黑色，则置换为蓝色
+                if(tagFragment1 == false){
+                    textViews[1].setBackground(getDrawable(R.drawable.button_sensor_blue));
+                    tagFragment1 = !tagFragment1;
+                }
+
+                //若其余两个按钮为蓝色，则置为黑色
+                if(tagFragment0 == true){
+                    textViews[0].setBackground(getDrawable(R.drawable.button_gas_black));
+                    tagFragment0 = !tagFragment0;
+                }
+                if(tagFragment2 == true){
+                    textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
+                    tagFragment2 = !tagFragment2;
+                }
+
                 MARK=1;
                 break;
             case R.id.lay3:
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[2]).commit();
-                linearLayouts[2].setBackgroundResource(R.drawable.background);
+                //linearLayouts[2].setBackgroundResource(R.drawable.background);
                 //textViews[2].setTextColor(getResources().getColor(R.color.lightseagreen));
-                textViews[2].setBackground(getDrawable(R.drawable.button_user_center_blue));
+                //textViews[2].setBackground(getDrawable(R.drawable.button_user_center_blue));
+
+                //设置底部按钮的颜色变换，因为当前是fragment2，所以user center图片背景如果是黑色，则置换为蓝色
+                if(tagFragment2 == false){
+                    textViews[2].setBackground(getDrawable(R.drawable.button_user_center_blue));
+                    tagFragment2 = !tagFragment2;
+                }
+
+                //若其余两个按钮为蓝色，则置为黑色
+                if(tagFragment0 == true){
+                    textViews[0].setBackground(getDrawable(R.drawable.button_gas_black));
+                    tagFragment0 = !tagFragment0;
+                }
+                if(tagFragment1 == true){
+                    textViews[1].setBackground(getDrawable(R.drawable.button_sensor_black));
+                    tagFragment1 = !tagFragment1;
+                }
                 MARK=2;
                 break;
             default:
@@ -140,7 +196,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                            float arg3) {
         // TODO Auto-generated method stub
         Log.i(TAG,"resetlaybg");
-        resetlaybg();
+        //resetlaybg();
         //当是Fragment0的时候
         if(MARK==0)
         {
@@ -148,14 +204,25 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[1]).commit();
-                linearLayouts[1].setBackgroundResource(R.color.lightseagreen);
-                textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
+                //linearLayouts[1].setBackgroundResource(R.color.lightseagreen);
+                //textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
+                //设置底部按钮的颜色变换，因为当前是fragment1，所以sensor button图片背景如果是黑色，则置换为蓝色
+                if(tagFragment1 == false){
+                    textViews[1].setBackground(getDrawable(R.drawable.button_sensor_blue));
+                    tagFragment1 = !tagFragment1;
+                }
+
+                //若其余两个按钮为蓝色，则置为黑色
+                if(tagFragment0 == true){
+                    textViews[0].setBackground(getDrawable(R.drawable.button_gas_black));
+                    tagFragment0 = !tagFragment0;
+                }
+                if(tagFragment2 == true){
+                    textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
+                    tagFragment2 = !tagFragment2;
+                }
+
                 MARK=1;
-            }
-            else
-            {
-                linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
-                textViews[0].setTextColor(getResources().getColor(R.color.black));
             }
 
         }
@@ -166,23 +233,53 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[2]).commit();
-                linearLayouts[2].setBackgroundResource(R.color.lightseagreen);
-                textViews[2].setTextColor(getResources().getColor(R.color.lightseagreen));
+                //linearLayouts[2].setBackgroundResource(R.color.lightseagreen);
+                //textViews[2].setTextColor(getResources().getColor(R.color.lightseagreen));
+
+                //设置底部按钮的颜色变换，因为当前是fragment2，所以user center图片背景如果是黑色，则置换为蓝色
+                if(tagFragment2 == false){
+                    textViews[2].setBackground(getDrawable(R.drawable.button_user_center_blue));
+                    tagFragment2 = !tagFragment2;
+                }
+
+                //若其余两个按钮为蓝色，则置为黑色
+                if(tagFragment0 == true){
+                    textViews[0].setBackground(getDrawable(R.drawable.button_gas_black));
+                    tagFragment0 = !tagFragment0;
+                }
+                if(tagFragment1 == true){
+                    textViews[1].setBackground(getDrawable(R.drawable.button_sensor_black));
+                    tagFragment1 = !tagFragment1;
+                }
+
                 MARK=2;
             }
             else if(arg0.getX()>arg1.getX()+DISTANT)
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[0]).commit();
-                linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
-                textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
+                //linearLayouts[0].setBackgroundResource(R.color.lightseagreen);
+                //textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
+
+                //设置底部按钮的颜色变换，因为当前是fragment0，所以gas button图片背景如果是黑色，则置换为蓝色
+                if(tagFragment0 == false){
+                    textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
+                    tagFragment0 = !tagFragment0;
+                }
+
+                //若其余两个按钮为蓝色，则置为黑色
+                if(tagFragment2 == true){
+                    textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
+                    tagFragment2 = !tagFragment2;
+                }
+                if(tagFragment1 == true){
+                    textViews[1].setBackground(getDrawable(R.drawable.button_sensor_black));
+                    tagFragment1 = !tagFragment1;
+                }
+
                 MARK=0;
             }
-            else
-            {
-                linearLayouts[1].setBackgroundResource(R.color.lightseagreen);
-                textViews[1].setTextColor(getResources().getColor(R.color.black));
-            }
+
         }
         //当是Fragment2的时候
         else if(MARK==2)
@@ -191,15 +288,27 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
             {
                 getSupportFragmentManager().beginTransaction().hide(fragments[0]).hide(fragments[1]).hide(fragments[2])
                         .show(fragments[1]).commit();
-                linearLayouts[1].setBackgroundResource(R.color.lightseagreen);
-                textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
+                //linearLayouts[1].setBackgroundResource(R.color.black);
+                //textViews[1].setTextColor(getResources().getColor(R.color.lightseagreen));
+
+                //设置底部按钮的颜色变换，因为当前是fragment1，所以sensor button图片背景如果是黑色，则置换为蓝色
+                if(tagFragment1 == false){
+                    textViews[1].setBackground(getDrawable(R.drawable.button_sensor_blue));
+                    tagFragment1 = !tagFragment1;
+                }
+
+                //若其余两个按钮为蓝色，则置为黑色
+                if(tagFragment0 == true){
+                    textViews[0].setBackground(getDrawable(R.drawable.button_gas_black));
+                    tagFragment0 = !tagFragment0;
+                }
+                if(tagFragment2 == true){
+                    textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
+                    tagFragment2 = !tagFragment2;
+                }
                 MARK=1;
             }
-            else
-            {
-                linearLayouts[2].setBackgroundResource(R.color.lightseagreen);
-                textViews[2].setTextColor(getResources().getColor(R.color.black));
-            }
+
         }
         return false;
     }
