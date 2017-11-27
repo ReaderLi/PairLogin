@@ -1,5 +1,7 @@
 package com.withlovee.pairlogin.WebService;
 
+import android.graphics.LightingColorFilter;
+import android.nfc.Tag;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
@@ -17,6 +19,7 @@ public class LoginWebService {
 
     //请求 URL: http://47.95.213.176:3000/login
     private static String IP = "47.95.213.176:3000";
+    private static String TAG="LoginWebService";
     //把TOMCATURL改为你的服务地址
 
     /**
@@ -28,14 +31,15 @@ public class LoginWebService {
         HttpURLConnection conn = null;
         InputStream is = null;
 
+        Log.i(TAG,"executeHttpGet");
         try {
             // 用户名 密码
             // URL 地址
             //String path = "http://kamin.mynatapp.cc/";
             String path = "http://"+IP+"/login";
-            path = path + url + "?username=" + username + "&password=" + password;
+            path = path + "?username=" + username + "&password=" + password;
 
-            Log.i("WebService","my path is "+path);
+            Log.i(TAG,"my path is "+path);
 
             conn = (HttpURLConnection) new URL(path).openConnection();
             conn.setConnectTimeout(3000); // 设置超时时间
@@ -44,11 +48,20 @@ public class LoginWebService {
             conn.setRequestMethod("GET"); // 设置获取信息方式
             conn.setRequestProperty("Charset", "UTF-8"); // 设置接收数据编码格式
 
-            if (conn.getResponseCode() == 200) {
+            Log.i(TAG,"getResponseCode");
+
+
+            int num1 = conn.getResponseCode();
+            Log.i(TAG,"返回结果是 "+num1);
+
+            if (num1 == 200) {
+                //得到网络返回的输入流
                 is = conn.getInputStream();
                 return parseInfo(is);
             }
-            String iss = "返回状态不正常";
+
+            String iss = "返回状态不正常"+num1;
+
             return iss;
 
         }catch (Exception e) {

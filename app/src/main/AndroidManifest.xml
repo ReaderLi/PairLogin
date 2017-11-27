@@ -51,7 +51,7 @@
         <activity
             android:name=".HttpTest.FragmentSwitchActivity"
             android:label="@string/title_activity_fragment_switch"
-            android:theme="@android:style/Theme.DeviceDefault.Light">
+            android:theme="@style/secondPageTheme">
         </activity>
     </application>
 

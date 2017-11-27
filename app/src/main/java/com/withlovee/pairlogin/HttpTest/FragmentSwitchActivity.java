@@ -1,5 +1,7 @@
 package com.withlovee.pairlogin.HttpTest;
 
+
+import android.app.ActionBar;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
@@ -8,6 +10,7 @@ import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,6 +28,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     public int MARK=0;
     /**定义手势两点之间的最小距离*/
     final int DISTANT=50;
+    private ActionBar actionBar;
 
     //tag等于false，即代表底部按钮的背景图片是黑色
     boolean tagFragment0 = false;
@@ -36,7 +40,9 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);//设置窗口无标题栏
         setContentView(R.layout.activity_fragment_switch);
+
 
         Log.i(TAG,"OnCreate");
         //分别实例化和初始化fragement、lineatlayout、textview
@@ -74,6 +80,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     /**初始化textview*/
     public void settextview()
     {
+        Log.i(TAG,"settextview");
         textViews=new TextView[3];
         textViews[0]=(TextView)findViewById(R.id.fratext1);
         textViews[1]=(TextView)findViewById(R.id.fratext2);
@@ -81,6 +88,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
         //textViews[0].setTextColor(getResources().getColor(R.color.lightseagreen));
         textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
         tagFragment0 = !tagFragment0;
+        setTitle(R.string.weatherPage_title);
     }
     /**点击底部linerlayout实现切换fragment的效果*/
     public void LayoutOnclick(View v)
@@ -99,17 +107,22 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                 if(tagFragment0 == false){
                     textViews[0].setBackground(getDrawable(R.drawable.button_gas_blue));
                     tagFragment0 = !tagFragment0;
+
                 }
 
                 //若其余两个按钮为蓝色，则置为黑色
                 if(tagFragment2 == true){
                     textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
                     tagFragment2 = !tagFragment2;
+
                 }
                 if(tagFragment1 == true){
                     textViews[1].setBackground(getDrawable(R.drawable.button_sensor_black));
                     tagFragment1 = !tagFragment1;
+
                 }
+
+                setTitle(R.string.weatherPage_title);
 
                 MARK=0;
                 break;
@@ -125,18 +138,22 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                 if(tagFragment1 == false){
                     textViews[1].setBackground(getDrawable(R.drawable.button_sensor_blue));
                     tagFragment1 = !tagFragment1;
+
                 }
 
                 //若其余两个按钮为蓝色，则置为黑色
                 if(tagFragment0 == true){
                     textViews[0].setBackground(getDrawable(R.drawable.button_gas_black));
                     tagFragment0 = !tagFragment0;
+
                 }
                 if(tagFragment2 == true){
                     textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
                     tagFragment2 = !tagFragment2;
+
                 }
 
+                setTitle(R.string.sensorPage_title);
                 MARK=1;
                 break;
             case R.id.lay3:
@@ -150,17 +167,21 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                 if(tagFragment2 == false){
                     textViews[2].setBackground(getDrawable(R.drawable.button_user_center_blue));
                     tagFragment2 = !tagFragment2;
+
                 }
 
                 //若其余两个按钮为蓝色，则置为黑色
                 if(tagFragment0 == true){
                     textViews[0].setBackground(getDrawable(R.drawable.button_gas_black));
                     tagFragment0 = !tagFragment0;
+
                 }
                 if(tagFragment1 == true){
                     textViews[1].setBackground(getDrawable(R.drawable.button_sensor_black));
                     tagFragment1 = !tagFragment1;
+
                 }
+                setTitle(R.string.user_center_title);
                 MARK=2;
                 break;
             default:
@@ -195,7 +216,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
     public boolean onFling(MotionEvent arg0, MotionEvent arg1, float arg2,
                            float arg3) {
         // TODO Auto-generated method stub
-        Log.i(TAG,"resetlaybg");
+        Log.i(TAG,"onFling");
         //resetlaybg();
         //当是Fragment0的时候
         if(MARK==0)
@@ -221,6 +242,8 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                     textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
                     tagFragment2 = !tagFragment2;
                 }
+
+                setTitle(R.string.sensorPage_title);
 
                 MARK=1;
             }
@@ -252,6 +275,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                     tagFragment1 = !tagFragment1;
                 }
 
+                setTitle(R.string.user_center_title);
                 MARK=2;
             }
             else if(arg0.getX()>arg1.getX()+DISTANT)
@@ -277,6 +301,8 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                     tagFragment1 = !tagFragment1;
                 }
 
+
+                setTitle(R.string.weatherPage_title);
                 MARK=0;
             }
 
@@ -306,6 +332,7 @@ public class FragmentSwitchActivity extends FragmentActivity implements GestureD
                     textViews[2].setBackground(getDrawable(R.drawable.button_user_center_black));
                     tagFragment2 = !tagFragment2;
                 }
+                setTitle(R.string.sensorPage_title);
                 MARK=1;
             }
 

@@ -87,12 +87,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
 
                     //提交输入的账户名和密码，验证登录
-                    //attemptLogin();
+                    attemptLogin();
 
                     Log.i(TAG,"onclick!");
                     //为了便于测试，设置为不验证就直接跳转
-                    Intent intent = new Intent(LoginActivity.this,FragmentSwitchActivity.class);
-                    startActivity(intent);
+                    /*Intent intent = new Intent(LoginActivity.this,FragmentSwitchActivity.class);
+                    startActivity(intent);*/
 
 
 
@@ -137,7 +137,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                         Toast.makeText(getApplicationContext(), "验证成功",
                                 Toast.LENGTH_SHORT).show();
                         //验证成功，跳转到相应界面
-                        Intent intent = new Intent(LoginActivity.this,AdministratorMainPageActivity.class);
+                        Intent intent = new Intent(LoginActivity.this,FragmentSwitchActivity.class);
                         startActivity(intent);
                     }
                     else
